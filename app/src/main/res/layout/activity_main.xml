@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="My Nanodegree Apps!"
+        android:id="@+id/textViewTitle"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_margin="30dp"
+        android:padding="10dp">
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Spotify Streamer"
+            android:id="@+id/buttonSpotifyStreamer"
+            android:layout_gravity="center_horizontal"
+            android:onClick="clickButtonSpotifyStreamer"
+            android:layout_weight="1"
+            android:background="#F08C35"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Scores App"
+            android:id="@+id/buttonScores"
+            android:layout_gravity="center_horizontal"
+            android:onClick="clickButtonScores"
+            android:layout_weight="1"
+            android:background="#F08C35"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Library App"
+            android:id="@+id/buttonLibrary"
+            android:layout_gravity="center_horizontal"
+            android:onClick="clickButtonLibrary"
+            android:layout_weight="1"
+            android:background="#F08C35"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Build It Bigger"
+            android:id="@+id/buttonBuildItBigger"
+            android:layout_gravity="center_horizontal"
+            android:onClick="clickButtonBuildItBigger"
+            android:layout_weight="1"
+            android:background="#F08C35"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="XYZ Reader"
+            android:id="@+id/buttonXYZReader"
+            android:layout_gravity="center_horizontal"
+            android:onClick="clickButtonXYZReader"
+            android:layout_weight="1"
+            android:background="#F08C35"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Capstone"
+            android:id="@+id/buttonCapstone"
+            android:layout_gravity="center_horizontal"
+            android:onClick="clickButtonCapstone"
+            android:layout_weight="1"
+            android:background="#F25416"
+            android:layout_marginTop="10dp"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</RelativeLayout>
