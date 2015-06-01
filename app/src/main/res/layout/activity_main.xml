@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="My Nanodegree Apps!"
+        android:text="@string/main_title"
         android:id="@+id/textViewTitle"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
@@ -21,79 +21,85 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textViewTitle"
-        android:layout_margin="30dp"
-        android:padding="10dp">
+        android:layout_margin="@dimen/linear_layout_layout_margin"
+        android:padding="@dimen/linear_layout_layout_padding">
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Spotify Streamer"
+            android:text="@string/appname_SpotifyStreamer"
             android:id="@+id/buttonSpotifyStreamer"
             android:layout_gravity="center_horizontal"
             android:onClick="clickButtonSpotifyStreamer"
             android:layout_weight="1"
-            android:background="#F08C35"
-            android:textColor="#ffffff" />
+            android:background="@color/orange"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Scores App"
+            android:text="@string/appname_ScoresApp"
             android:id="@+id/buttonScores"
             android:layout_gravity="center_horizontal"
             android:onClick="clickButtonScores"
             android:layout_weight="1"
-            android:background="#F08C35"
-            android:layout_marginTop="10dp"
-            android:textColor="#ffffff" />
+            android:background="@color/orange"
+            android:layout_marginTop="@dimen/btn_margin_top"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Library App"
+            android:text="@string/appname_LibraryApp"
             android:id="@+id/buttonLibrary"
             android:layout_gravity="center_horizontal"
             android:onClick="clickButtonLibrary"
             android:layout_weight="1"
-            android:background="#F08C35"
-            android:layout_marginTop="10dp"
-            android:textColor="#ffffff" />
+            android:background="@color/orange"
+            android:layout_marginTop="@dimen/btn_margin_top"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Build It Bigger"
+            android:text="@string/appname_BuildItBigger"
             android:id="@+id/buttonBuildItBigger"
             android:layout_gravity="center_horizontal"
             android:onClick="clickButtonBuildItBigger"
             android:layout_weight="1"
-            android:background="#F08C35"
-            android:layout_marginTop="10dp"
-            android:textColor="#ffffff" />
+            android:background="@color/orange"
+            android:layout_marginTop="@dimen/btn_margin_top"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="XYZ Reader"
+            android:text="@string/appname_XYZReader"
             android:id="@+id/buttonXYZReader"
             android:layout_gravity="center_horizontal"
             android:onClick="clickButtonXYZReader"
             android:layout_weight="1"
-            android:background="#F08C35"
-            android:layout_marginTop="10dp"
-            android:textColor="#ffffff" />
+            android:background="@color/orange"
+            android:layout_marginTop="@dimen/btn_margin_top"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Capstone"
+            android:text="@string/appname_Capstone"
             android:id="@+id/buttonCapstone"
             android:layout_gravity="center_horizontal"
             android:onClick="clickButtonCapstone"
             android:layout_weight="1"
-            android:background="#F25416"
-            android:layout_marginTop="10dp"
-            android:textColor="#ffffff" />
+            android:background="@color/red"
+            android:layout_marginTop="@dimen/btn_margin_top"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </RelativeLayout>

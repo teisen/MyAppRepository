@@ -13,6 +13,7 @@ public class MainActivity extends ActionBarActivity {
 
     private Context context;
     private static int duration = Toast.LENGTH_SHORT;
+    private Toast mAppToast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,32 +45,38 @@ public class MainActivity extends ActionBarActivity {
 
     /** Called when the user touches the buttonSpotifyStreamer */
     public void clickButtonSpotifyStreamer(View view) {
-        toastIt("This button will launch the Spotify Streamer App!");
+        toastIt(getString(R.string.appname_SpotifyStreamer));
     }
     /** Called when the user touches the clickButtonScores */
     public void clickButtonScores(View view) {
-        toastIt("This button will launch the Scores App!");
+        toastIt(getString(R.string.appname_ScoresApp));
     }
     /** Called when the user touches the clickButtonLibrary */
     public void clickButtonLibrary(View view) {
-        toastIt("This button will launch the Library App!");
+        toastIt(getString(R.string.appname_LibraryApp));
     }
     /** Called when the user touches the clickButtonBuildItBigger */
     public void clickButtonBuildItBigger(View view) {
-        toastIt("This button will launch the Build It Bigger App!");
+        toastIt(getString(R.string.appname_BuildItBigger));
     }
     /** Called when the user touches the clickButtonXYZReader */
     public void clickButtonXYZReader(View view) {
-        toastIt("This button will launch the XYZ Reader App!");
+        toastIt(getString(R.string.appname_XYZReader));
     }
     /** Called when the user touches the clickButtonCapstone */
     public void clickButtonCapstone(View view) {
-        toastIt("This button will launch the Capstone App!");
+        toastIt(getString(R.string.appname_Capstone));
     }
 
-    private void toastIt(CharSequence text) {
+    private void toastIt(CharSequence appname) {
         context = getApplicationContext();
-        Toast toast = Toast.makeText(context, text, duration);
-        toast.show();
+
+        //Stop any previous toasts
+        if(mAppToast != null) {
+            mAppToast.cancel();
+        }
+
+        mAppToast = Toast.makeText(context, getString(R.string.toast_launchicon, appname), duration);
+        mAppToast.show();
     }
 }
