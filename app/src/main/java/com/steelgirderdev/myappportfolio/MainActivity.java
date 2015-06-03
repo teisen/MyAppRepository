@@ -1,6 +1,8 @@
 package com.steelgirderdev.myappportfolio;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -45,7 +47,7 @@ public class MainActivity extends ActionBarActivity {
 
     /** Called when the user touches the buttonSpotifyStreamer */
     public void clickButtonSpotifyStreamer(View view) {
-        toastIt(getString(R.string.appname_SpotifyStreamer));
+        openApp(this, getString(R.string.apppackage_SpotifyStreamer));
     }
     /** Called when the user touches the clickButtonScores */
     public void clickButtonScores(View view) {
@@ -78,5 +80,27 @@ public class MainActivity extends ActionBarActivity {
 
         mAppToast = Toast.makeText(context, getString(R.string.toast_launchicon, appname), duration);
         mAppToast.show();
+    }
+
+    /** Open another app.
+     * Source: http://stackoverflow.com/questions/2780102/open-another-application-from-your-own-intent/7596063#7596063
+     * @param context current Context, like Activity, App, or Service
+     * @param packageName the full package name of the app to open
+     * @return true if likely successful, false if unsuccessful
+     */
+    public static boolean openApp(Context context, String packageName) {
+        PackageManager manager = context.getPackageManager();
+        try {
+            Intent i = manager.getLaunchIntentForPackage(packageName);
+            if (i == null) {
+                throw new PackageManager.NameNotFoundException();
+            }
+            i.addCategory(Intent.CATEGORY_LAUNCHER);
+            context.startActivity(i);
+            return true;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 }

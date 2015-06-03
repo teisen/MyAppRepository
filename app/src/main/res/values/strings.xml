@@ -5,6 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="main_title">My Nanodegree Apps!</string>
     <string name="appname_SpotifyStreamer">Spotify Streamer</string>
+    <string name="apppackage_SpotifyStreamer">com.steelgirderdev.spotifystreamer</string>
     <string name="appname_ScoresApp">Scores</string>
     <string name="appname_LibraryApp">Library</string>
     <string name="appname_BuildItBigger">Build It Bigger</string>
